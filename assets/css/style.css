@@ -1,3 +1,7 @@
+.hidden{
+    display: none;
+}
+
 #left-attack {
     float: left;
     padding: 8em;
