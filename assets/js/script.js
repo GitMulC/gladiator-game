@@ -1,15 +1,25 @@
 /**
  * Eventlisteners
  */
+let startGame = document.getElementById('button-start');
 let leftSwing = document.getElementById('left-attack');
 let rightSwing = document.getElementById('right-attack');
 
+startGame.addEventListener('click', function(){
+    battleStart();
+});
 leftSwing.addEventListener('click', function(){
     swing(0);
 });
 rightSwing.addEventListener('click', function(){
     swing(1);
 });
+
+
+function battleStart(){
+    leftSwing.classList.remove('hidden');
+    rightSwing.classList.remove('hidden');
+}
 
 /**
  * Core Game mechanic
