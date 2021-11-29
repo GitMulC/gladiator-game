@@ -1,0 +1,17 @@
+#left-attack {
+    float: left;
+    padding: 8em;
+    border: 5px solid black;
+    margin: 19em 0em;
+}
+
+#right-attack {
+    float: right;
+    padding: 8em;
+    border: 5px solid black;
+    margin: 19em 0em;
+}
+
+#start-area {
+    
+}
