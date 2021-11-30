@@ -39,3 +39,5 @@ A responsive tally that tells you the current hitpoints of the gladiator you're 
 ### Media
 
 - Sounds taken from (https://mixkit.co/).
+- Gladiator image taken from (https://www.pngegg.com/en/png-chfzj).
+- Background image taken from (https://www.reddit.com/r/forhonor/comments/d3yigo/ubi_please_give_us_a_roman_arena_map_with_a_loud/).
