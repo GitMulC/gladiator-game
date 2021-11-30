@@ -2,6 +2,8 @@
  * Eventlisteners
  */
 let startGame = document.getElementById('button-start');
+let tutorialArea = document.getElementById('intro-tutorial');
+let enemyOpponent = document.getElementById('opponent-area');
 let leftSwing = document.getElementById('left-attack');
 let rightSwing = document.getElementById('right-attack');
 
@@ -15,10 +17,16 @@ rightSwing.addEventListener('click', function(){
     swing(1);
 });
 
+/**
+ * Functions
+ */
+
 
 function battleStart(){
+    enemyOpponent.classList.remove('hidden');
     leftSwing.classList.remove('hidden');
     rightSwing.classList.remove('hidden');
+    tutorialArea.classList.add('hidden');
 }
 
 /**
@@ -52,10 +60,12 @@ function playAudio(blockedAttack){
     if(blockedAttack){
        let block = document.getElementById('sword-block');
        console.log('Block');
+       block.currentTime = 0;
        block.play(); 
     } else{
         let hit = document.getElementById('sword-hit');
         console.log('Hit');
+        hit.currentTime = 0;
         hit.play();
     }
 }
