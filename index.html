@@ -10,7 +10,10 @@
 <body>
     <section id="intro-tutorial">
         <p>
-            Welcome to the Gladiator Game! Fight and defeat your opponents in the arena. Win to earn your freedom. Click the Fight button to begin!
+            <ul>Welcome to the the fighting pits! Fight and defeat rival gladiators to earn your freedom.</ul> 
+            <ul>Click the right side to strike right, and the left side to strike left!</ul> 
+            <ul>Click the Fight button to face your opponent!</ul> 
+            <ul>May the Gods favour you.</ul>
         </p>
     </section>
     <section id="left-attack" class="hidden">
@@ -29,6 +32,15 @@
     
     <section id="start-area">
         <button id="button-start">Fight</button>
+    </section>
+
+    <section id="lifetotals">
+        <p class="life"><span id="enemy-life">0</span></p>
+    </section>
+
+    <section>
+        <button id="button-mute">Mute</button>
+        <button id="button-unmute" class="hidden">Unmute</button>
     </section>
 
     <audio id="sword-swing" src="assets/sounds/sword-swing.wav"></audio>
