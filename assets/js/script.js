@@ -55,10 +55,24 @@ function swing(swingSide){
  */
 
 function hitPoints(){
-    let damage = parseInt(document.getElementById('enemy-life').innerText);
-    document.getElementById('enemy-life').innerText = ++damage;
+    let enemyLife = document.getElementById('enemy-life');
+    let damage = parseInt(enemyLife.innerText);
+    enemyLife.innerText = ++damage;
 }
 
+let mute;
+const muteBtn = document.getElementById('button-mute');
+const unmuteBtn = document.getElementById('button-unmute');
+muteBtn.addEventListener('click', function(){
+    mute = true;
+    muteBtn.classList.add('hidden');
+    unmuteBtn.classList.remove('hidden');
+});
+unmuteBtn.addEventListener('click', function(){
+    mute = false;
+    unmuteBtn.classList.add('hidden');
+    muteBtn.classList.remove('hidden');
+});
 
 /**
  * Sounds for gameplay
@@ -67,18 +81,20 @@ function hitPoints(){
  */
 
 function playAudio(blockedAttack){
-    let audio = document.getElementById('sword-swing');
-    audio.currentTime = 0;
-    audio.play();
-    if(blockedAttack){
-       let block = document.getElementById('sword-block');
-       console.log('Block');
-       block.currentTime = 0;
-       block.play(); 
-    } else{
-        let hit = document.getElementById('sword-hit');
-        console.log('Hit');
-        hit.currentTime = 0;
-        hit.play();
+    if (!mute){
+        let audio = document.getElementById('sword-swing');
+        audio.currentTime = 0;
+        audio.play();
+        if(blockedAttack){
+           let block = document.getElementById('sword-block');
+           console.log('Block');
+           block.currentTime = 0;
+           block.play(); 
+        } else{
+            let hit = document.getElementById('sword-hit');
+            console.log('Hit');
+            hit.currentTime = 0;
+            hit.play();
+        }
     }
 }
