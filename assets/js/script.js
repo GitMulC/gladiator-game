@@ -44,6 +44,19 @@ function swing(swingSide){
     let result = gladiatorBlock();
     let blockedAttack = result === swingSide;
     playAudio(blockedAttack);
+    let hitGladiator = result !== swingSide;
+    if(hitGladiator){
+        hitPoints();
+    }
+}
+
+/**
+ * Enemy Hit points function
+ */
+
+function hitPoints(){
+    let damage = parseInt(document.getElementById('enemy-life').innerText);
+    document.getElementById('enemy-life').innerText = ++damage;
 }
 
 
