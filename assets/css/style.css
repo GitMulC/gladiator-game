@@ -49,13 +49,25 @@ body{
     color: red;
 }
 
-button {
+#button-start {
     margin: 0;
     position: absolute;
     top: 50%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+}
+
+#button-mute,#button-unmute {
+    position: fixed;
+    bottom: 1em;
+    right: 1%;
+}
+
+#button-reset {
+    position: fixed;
+    bottom: 1em;
+    left: 1%;
 }
 
 #lifetotals {
@@ -116,12 +128,5 @@ button {
     color: red;
 }
 
-button {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
+
 }
