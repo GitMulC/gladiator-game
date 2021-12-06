@@ -18,6 +18,33 @@ rightSwing.addEventListener('click', function(){
 });
 
 /**
+ * Mute/unmute button event listeners
+ */
+
+ let mute;
+ const muteBtn = document.getElementById('button-mute');
+ const unmuteBtn = document.getElementById('button-unmute');
+ muteBtn.addEventListener('click', function(){
+     mute = true;
+     muteBtn.classList.add('hidden');
+     unmuteBtn.classList.remove('hidden');
+ });
+ unmuteBtn.addEventListener('click', function(){
+     mute = false;
+     unmuteBtn.classList.add('hidden');
+     muteBtn.classList.remove('hidden');
+ });
+
+ /**
+  * Game Reset function & event listener
+  */
+
+let restart = document.getElementById('button-reset');
+restart.addEventListener('click', function(){
+    location.reload();
+});
+
+/**
  * Functions
  */
 
@@ -36,6 +63,7 @@ function battleStart(){
  * A hit will trigger sword hit audio
  * A block will trigger sword block audio
  */
+
 function gladiatorBlock(){
     return Math.floor(Math.random()*2);
 }
@@ -60,19 +88,6 @@ function hitPoints(){
     enemyLife.innerText = ++damage;
 }
 
-let mute;
-const muteBtn = document.getElementById('button-mute');
-const unmuteBtn = document.getElementById('button-unmute');
-muteBtn.addEventListener('click', function(){
-    mute = true;
-    muteBtn.classList.add('hidden');
-    unmuteBtn.classList.remove('hidden');
-});
-unmuteBtn.addEventListener('click', function(){
-    mute = false;
-    unmuteBtn.classList.add('hidden');
-    muteBtn.classList.remove('hidden');
-});
 
 /**
  * Sounds for gameplay
@@ -84,16 +99,19 @@ function playAudio(blockedAttack){
     if (!mute){
         let audio = document.getElementById('sword-swing');
         audio.currentTime = 0;
+        audio.volume = 0.1;
         audio.play();
         if(blockedAttack){
            let block = document.getElementById('sword-block');
            console.log('Block');
            block.currentTime = 0;
+           block.volume = 0.1;
            block.play(); 
         } else{
             let hit = document.getElementById('sword-hit');
             console.log('Hit');
             hit.currentTime = 0;
+            hit.volume = 0.1;
             hit.play();
         }
     }
