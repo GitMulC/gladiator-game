@@ -54,6 +54,12 @@ function battleStart(){
     leftSwing.classList.remove('hidden');
     rightSwing.classList.remove('hidden');
     tutorialArea.classList.add('hidden');
+    let backgroundMusic = document.getElementById('ambient-crowd');
+    if(!mute){
+        backgroundMusic.loop = true;
+    backgroundMusic.volume = 0.1;
+    backgroundMusic.play();
+    }
 }
 
 /**
@@ -99,19 +105,19 @@ function playAudio(blockedAttack){
     if (!mute){
         let audio = document.getElementById('sword-swing');
         audio.currentTime = 0;
-        audio.volume = 0.1;
+        audio.volume = 0.15;
         audio.play();
         if(blockedAttack){
            let block = document.getElementById('sword-block');
            console.log('Block');
            block.currentTime = 0;
-           block.volume = 0.1;
+           block.volume = 0.15;
            block.play(); 
         } else{
             let hit = document.getElementById('sword-hit');
             console.log('Hit');
             hit.currentTime = 0;
-            hit.volume = 0.1;
+            hit.volume = 0.15;
             hit.play();
         }
     }
