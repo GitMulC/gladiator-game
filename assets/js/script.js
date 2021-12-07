@@ -6,6 +6,7 @@ let tutorialArea = document.getElementById('intro-tutorial');
 let enemyOpponent = document.getElementById('opponent-area');
 let leftSwing = document.getElementById('left-attack');
 let rightSwing = document.getElementById('right-attack');
+let lifeTotals = document.getElementById('lifetotals');
 
 startGame.addEventListener('click', function(){
     battleStart();
@@ -54,6 +55,7 @@ function battleStart(){
     leftSwing.classList.remove('hidden');
     rightSwing.classList.remove('hidden');
     tutorialArea.classList.add('hidden');
+    lifeTotals.classList.remove('hidden');
     let backgroundMusic = document.getElementById('ambient-crowd');
     if(!mute){
         backgroundMusic.loop = true;
@@ -85,13 +87,29 @@ function swing(swingSide){
 }
 
 /**
- * Enemy Hit points function
+ * Enemy Hit points function & transition to next boss
  */
 
 function hitPoints(){
     let enemyLife = document.getElementById('enemy-life');
     let damage = parseInt(enemyLife.innerText);
     enemyLife.innerText = ++damage;
+    if(damage === 5){
+        let boss = document.getElementById('opponent-area-2');
+        boss.classList.remove('hidden');
+        enemyOpponent.classList.add('hidden');
+        lifeTotals.classList.add('hidden');
+        let playerLife = document.getElementById('lifetotals-player');
+        let bossLife = document.getElementById('lifetotals-boss');
+        playerLife.classList.remove('hidden');
+        bossLife.classList.remove('hidden');
+        if(!mute){
+            let cheer = document.getElementById('win-cheer');
+        cheer.currentTime = 0;
+        cheer.volume = 0.4;
+        cheer.play();
+        }
+    }
 }
 
 
