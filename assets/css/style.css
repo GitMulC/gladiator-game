@@ -79,6 +79,22 @@ body{
     color: red;
 }
 
+#lifetotals-boss{
+    position: fixed;
+    top: 0;
+    right: 30%;
+    font-size: 3em;
+    color: red;
+}
+
+#lifetotals-player{
+    position: fixed;
+    top: 0;
+    left: 30%;
+    font-size: 3em;
+    color: green;
+}
+
 /* Images */ 
 #opponent{
     display: block;
@@ -89,9 +105,25 @@ body{
     transform: translate(-47%, -50%);
 }
 
+#opponent-2{
+    display: block;
+    position: absolute;
+    height: 77%;
+    width: 66%;
+    top: 61%;
+    left: 47%;
+    transform: translate(-47%, -50%);
+}
+
+#sword-right{
+    transform: scaleX(-1);
+}
+
 .hidden{
     display: none;
 }
+
+
 
 /* Media Queries */
 @media screen and (min-width: 1200px) {
