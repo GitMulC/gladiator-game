@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&family=Roboto+Slab&display=swap');
 
 body{
-    font-family: Roboto, sans-serif;
+    font-family: MedievalSharp, sans-serif;
     font-weight: 600;
     background-image: url(../images/arena-bg.jpg);
     background-repeat: no-repeat;
@@ -21,7 +21,7 @@ body{
     transform: translate(-50%, -50%);
     text-align: center;
     font-size: 20px;
-    color: white;
+    color: #fffcf0;
 }
 
 #left-attack {
@@ -51,24 +51,36 @@ body{
 }
 
 #button-start {
+    font-family: MedievalSharp, sans-serif;
+    font-weight: 600;
     margin: 0;
     position: absolute;
     top: 50%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+    background-color: #fffcf0;;
 }
 
 #button-mute,#button-unmute {
+    font-family: MedievalSharp, sans-serif;
+    font-weight: 600;
     position: fixed;
-    bottom: 1em;
+    bottom: 10%;
     right: 1%;
+    background-color: #fffcf0;;
 }
 
 #button-reset {
-    position: fixed;
-    bottom: 1em;
-    left: 1%;
+    font-family: MedievalSharp, sans-serif;
+    font-weight: 600;
+    margin: 0;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: #fffcf0;;
 }
 
 #lifetotals {
@@ -109,9 +121,9 @@ body{
     display: block;
     position: absolute;
     height: 77%;
-    width: 66%;
+    width: 47%;
     top: 61%;
-    left: 47%;
+    left: 48%;
     transform: translate(-47%, -50%);
 }
 
@@ -149,6 +161,10 @@ body{
     font-size: 2em;
     color: red;
 }
-
+    #button-mute,#button-unmute {
+    position: fixed;
+    bottom: 87%;
+    right: 1%;
+}
 
 }
