@@ -8,18 +8,23 @@
     <title>The Gladiator Game</title>
 </head>
 <body>
+    <!--Introduction screen-->
     <section id="intro-tutorial">
         <p>
-            <ul>Welcome to the the fighting pits! Fight and defeat rival gladiators to earn your freedom.</ul> 
+            <ul>Welcome to the the fighting pits. Fight and defeat rival gladiators to earn your freedom.</ul> 
             <ul>Click the right side to strike right, and the left side to strike left!</ul> 
-            <ul>Click the Fight button to face your opponent!</ul> 
+            <ul>Click the Fight button to face your first opponent.</ul>
+            <ul>Click the restart button to replay/restart your arena battle.</ul> 
             <ul>May the Gods favour you.</ul>
         </p>
     </section>
+    
+    <!--Left attack section-->
     <section id="left-attack" class="hidden">
         Left Attack <img src="assets/images/sword-img-2.png" alt="Roman style short sword">
     </section>
 
+    <!--Opponents section-->
     <section>
         <figure id="opponent-area" class="hidden">
             <img id="opponent" src="assets/images/gladiator.png" alt="Armor clad gladiator weilding sword and shield">
@@ -29,35 +34,37 @@
         </figure>
     </section>
 
+    <!--Right attack section-->
     <section id="right-attack" class="hidden">
         Right Attack <img id="sword-right" src="assets/images/sword-img-2.png" alt="Roman style short sword">
     </section>
     
+    <!--Fight/restart buttons-->
     <section id="start-area">
         <button id="button-start">Fight</button>
+        <button id="button-reset" class="hidden">Restart</button>
     </section>
 
+    <!--Life tallies/totals-->
     <section id="lifetotals" class="hidden">
-        <p class="life"><span id="enemy-life">0</span><i class="fas fa-skull-crossbones"></i></p>
+        <p class="life"><span id="enemy-life">0<i class="fas fa-chess-pawn"></i></p>
     </section>
 
     <section id="lifetotals-boss" class="hidden">
-        <p class="life-boss"><span id="enemy-life">0</span><i class="fas fa-skull-crossbones"></i></p>
+        <p class="life-boss"><span id="boss-life">5</span><i class="fas fa-crown"></i></p>
     </section>
 
     <section id="lifetotals-player" class="hidden">
-        <p class="life-player"><span id="enemy-life">0</p>
+        <p class="life-player"><span id="player-life">5<i class="fas fa-user-shield"></i></p>
     </section>
 
+    <!--Mute/unmute buttons-->
     <section>
         <button id="button-mute">Mute <i class="fas fa-volume-mute"></i></button>
         <button id="button-unmute" class="hidden">Unmute <i class="fas fa-volume-up"></i></button>
     </section>
 
-    <section>
-        <button id="button-reset">Restart</button>
-    </section>
-
+    <!--Audio-->
     <audio id="sword-swing" src="assets/sounds/sword-swing.wav"></audio>
     <audio id="sword-block" src="assets/sounds/sword-block.wav"></audio>
     <audio id="sword-hit" src="assets/sounds/sword-hit.mp3"></audio>
@@ -65,6 +72,7 @@
     <audio id="win-cheer" src="assets/sounds/win-cheer.wav"></audio>
 
     <script src="assets/js/script.js"></script>
+    <!--Font Awesome link-->
     <script src="https://kit.fontawesome.com/b6e8d9e3d3.js" crossorigin="anonymous"></script>
 </body>
 </html>
