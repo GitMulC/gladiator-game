@@ -4,6 +4,7 @@
 let startGame = document.getElementById('button-start');
 let tutorialArea = document.getElementById('intro-tutorial');
 let enemyOpponent = document.getElementById('opponent-area');
+let bossOpponent = document.getElementById('opponent-area-2');
 let leftSwing = document.getElementById('left-attack');
 let rightSwing = document.getElementById('right-attack');
 let lifeTotals = document.getElementById('lifetotals');
@@ -49,8 +50,10 @@ restart.addEventListener('click', function(){
  * Functions
  */
 
-
+// Fight button function
 function battleStart(){
+    startGame.classList.add('hidden');
+    restart.classList.remove('hidden');
     enemyOpponent.classList.remove('hidden');
     leftSwing.classList.remove('hidden');
     rightSwing.classList.remove('hidden');
@@ -72,10 +75,12 @@ function battleStart(){
  * A block will trigger sword block audio
  */
 
+//Generate opponents side attack left(0) or right(1)
 function gladiatorBlock(){
     return Math.floor(Math.random()*2);
 }
 
+// Determines the outcome of each swing
 function swing(swingSide){
     let result = gladiatorBlock();
     let blockedAttack = result === swingSide;
@@ -104,7 +109,7 @@ function hitPoints(){
         playerLife.classList.remove('hidden');
         bossLife.classList.remove('hidden');
         if(!mute){
-            let cheer = document.getElementById('win-cheer');
+        let cheer = document.getElementById('win-cheer');
         cheer.currentTime = 0;
         cheer.volume = 0.4;
         cheer.play();
