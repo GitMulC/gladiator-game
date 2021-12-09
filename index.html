@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,18 +8,19 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <title>The Gladiator Game</title>
 </head>
+
 <body>
     <!--Introduction screen-->
     <section id="intro-tutorial">
         <p>
-            <ul>Welcome to the the fighting pits. Fight and defeat rival gladiators to earn your freedom.</ul> 
-            <ul>Click the right side to strike right, and the left side to strike left!</ul> 
+            <ul>Welcome to the the fighting pits. Fight and defeat rival gladiators to earn your freedom.</ul>
+            <ul>Click the right side to strike right, and the left side to strike left!</ul>
             <ul>Click the Fight button to face your first opponent.</ul>
-            <ul>Click the restart button to replay/restart your arena battle.</ul> 
+            <ul>Click the restart button to replay/restart your arena battle.</ul>
             <ul>May the Gods favour you.</ul>
         </p>
     </section>
-    
+
     <!--Left attack section-->
     <section id="left-attack" class="hidden">
         Left Attack <img src="assets/images/sword-img-2.png" alt="Roman style short sword">
@@ -38,7 +40,7 @@
     <section id="right-attack" class="hidden">
         Right Attack <img id="sword-right" src="assets/images/sword-img-2.png" alt="Roman style short sword">
     </section>
-    
+
     <!--Fight/restart buttons-->
     <section id="start-area">
         <button id="button-start">Fight</button>
@@ -47,15 +49,15 @@
 
     <!--Life tallies/totals-->
     <section id="lifetotals" class="hidden">
-        <p class="life"><span id="enemy-life">0<i class="fas fa-chess-pawn"></i></p>
+        <p class="life"><span id="enemy-life">0</span><i class="fas fa-chess-pawn"></i></p>
     </section>
 
     <section id="lifetotals-boss" class="hidden">
-        <p class="life-boss"><span id="boss-life">5</span><i class="fas fa-crown"></i></p>
+        <p class="life-boss"><span id="boss-life">0</span><i class="fas fa-crown"></i></p>
     </section>
 
     <section id="lifetotals-player" class="hidden">
-        <p class="life-player"><span id="player-life">5<i class="fas fa-user-shield"></i></p>
+        <p class="life-player"><span id="player-life">0</span><i class="fas fa-user-shield"></i></p>
     </section>
 
     <!--Mute/unmute buttons-->
@@ -75,4 +77,5 @@
     <!--Font Awesome link-->
     <script src="https://kit.fontawesome.com/b6e8d9e3d3.js" crossorigin="anonymous"></script>
 </body>
+
 </html>
