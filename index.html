@@ -23,7 +23,7 @@
 
     <!--Left attack section-->
     <section id="left-attack" class="hidden">
-        Left Attack <img src="assets/images/sword-img-2.png" alt="Roman style short sword">
+        <img id="sword-left" src="assets/images/sword-img-2.png" alt="Roman style short sword">
     </section>
 
     <!--Opponents section-->
@@ -38,7 +38,7 @@
 
     <!--Right attack section-->
     <section id="right-attack" class="hidden">
-        Right Attack <img id="sword-right" src="assets/images/sword-img-2.png" alt="Roman style short sword">
+        <img id="sword-right" src="assets/images/sword-img-2.png" alt="Roman style short sword">
     </section>
 
     <!--Fight/restart buttons-->
@@ -66,10 +66,23 @@
         <button id="button-unmute" class="hidden">Unmute <i class="fas fa-volume-up"></i></button>
     </section>
 
+    <section id="winner" class="hidden">
+        <p>
+            Congratulations you have defeated the Gladiators. You have earned your freedom!
+        </p>
+    </section>
+
+    <section id="loser" class="hidden">
+        <p>
+            Defeat! 
+        </p>
+    </section>
+
     <!--Audio-->
     <audio id="sword-swing" src="assets/sounds/sword-swing.wav"></audio>
     <audio id="sword-block" src="assets/sounds/sword-block.wav"></audio>
     <audio id="sword-hit" src="assets/sounds/sword-hit.mp3"></audio>
+    <audio id="boss-attack" src="assets/sounds/boss-attack.mp3"></audio>
     <audio id="ambient-crowd" src="assets/sounds/ambient-crowd.mp3"></audio>
     <audio id="win-cheer" src="assets/sounds/win-cheer.wav"></audio>
 
