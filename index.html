@@ -43,6 +43,9 @@
     <section id="start-area">
         <button id="button-start">Fight</button>
         <button id="button-reset" class="hidden">Restart</button>
+        <!--Mute/unmute buttons-->
+        <button id="button-mute">Mute <i class="fas fa-volume-mute"></i></button>
+        <button id="button-unmute" class="hidden">Unmute <i class="fas fa-volume-up"></i></button>
     </section>
 
     <!--Life tallies/totals-->
@@ -58,12 +61,6 @@
         <p class="life-player"><span id="player-life">0</span><i class="fas fa-user-shield"></i></p>
     </section>
 
-    <!--Mute/unmute buttons-->
-    <section>
-        <button id="button-mute">Mute <i class="fas fa-volume-mute"></i></button>
-        <button id="button-unmute" class="hidden">Unmute <i class="fas fa-volume-up"></i></button>
-    </section>
-
     <section id="winner" class="hidden">
         <p>
             Congratulations you have defeated the Gladiators. You have earned your freedom!
@@ -73,6 +70,18 @@
     <section id="loser" class="hidden">
         <p>
             Defeat!
+        </p>
+    </section>
+
+    <section id="flash-msg">
+        <p id="hit-glad" class="hidden">
+            Hit
+        </p>
+        <p id="glad-block" class="hidden">
+            Block
+        </p>
+        <p id="player-hit" class="hidden">
+            You've been hit
         </p>
     </section>
 
