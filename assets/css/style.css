@@ -33,11 +33,12 @@ body {
 
 #sword-left {
     transform: rotate(38deg);
+    height: 350px;
 }
 
-/* #sword-right {
-    transform: rotate(2deg);
-} */
+#sword-right {
+    height: 350px;
+}
 
 
 #intro-tutorial {
