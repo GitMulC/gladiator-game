@@ -168,7 +168,7 @@ function playAudio(blockedAttack) {
         audio.currentTime = 0;
         audio.volume = 0.15;
         audio.play();
-        if (isBossBattle) { 
+        if (isBossBattle) {
             if (blockedAttack) {
                 let bossAttack = document.getElementById('boss-attack');
                 bossAttack.currentTime = 0;
