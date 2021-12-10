@@ -54,6 +54,15 @@ body {
     color: #fffcf0;
 }
 
+#flash-msg {
+    position: relative;
+    text-align: center;
+    transform: translate(0%, 800%);
+    font-weight: bold;
+    font-size: 2em;
+    color: red;
+}
+
 #winner {
     margin: 0;
     background-color: rgba(0, 0, 0, 0.8);
@@ -107,7 +116,7 @@ body {
     font-weight: 600;
     margin: 0;
     position: absolute;
-    top: 50%;
+    top: 15%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
@@ -119,9 +128,12 @@ body {
 #button-unmute {
     font-family: MedievalSharp, sans-serif;
     font-weight: 600;
-    position: fixed;
-    bottom: 10%;
-    right: 1%;
+    margin: 0;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     background-color: #fffcf0;
     ;
 }
@@ -168,7 +180,6 @@ body {
 }
 
 
-
 /* Media Queries */
 @media screen and (min-width: 600px) {
     #opponent {
@@ -188,7 +199,7 @@ body {
         position: absolute;
         top: 60%;
         left: 50%;
-        width: 25%;
+        width: 20%;
         margin-right: -50%;
         transform: translate(-47%, -50%);
     }
@@ -213,12 +224,4 @@ body {
         font-size: 2em;
         color: red;
     }
-
-    #button-mute,
-    #button-unmute {
-        position: fixed;
-        bottom: 87%;
-        right: 1%;
-    }
-
 }
