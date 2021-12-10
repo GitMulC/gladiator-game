@@ -95,6 +95,13 @@ function swing(swingSide) {
         let playerLife = document.getElementById('player-life');
         let damage = parseInt(playerLife.innerText);
         playerLife.innerText = ++damage;
+        if (damage === 5) {
+            let lose = document.getElementById('loser');
+            lose.classList.remove('hidden');
+            bossOpponent.classList.add('hidden');
+            leftSwing.classList.add('hidden');
+            rightSwing.classList.add('hidden');
+        }
     }
 }
 
@@ -102,11 +109,24 @@ function swing(swingSide) {
  * Enemy Hit points function & transition to the boss
  */
 
-function hitPoints() {    
+function hitPoints() {
     if (isBossBattle) {
         let bossLife = document.getElementById('boss-life');
         let damage = parseInt(bossLife.innerText);
         bossLife.innerText = ++damage;
+        if (damage === 5) {
+            let win = document.getElementById('winner');
+            win.classList.remove('hidden');
+            bossOpponent.classList.add('hidden');
+            leftSwing.classList.add('hidden');
+            rightSwing.classList.add('hidden');
+            if (!mute) {
+                let cheer = document.getElementById('win-cheer');
+                cheer.currentTime = 0;
+                cheer.volume = 0.4;
+                cheer.play();
+            }
+        }
     } else {
         let enemyLife = document.getElementById('enemy-life');
         let damage = parseInt(enemyLife.innerText);
@@ -138,7 +158,7 @@ function transitionToBoss() {
 
 /**
  * Sounds for gameplay
- * Functions determine what sound will be played 
+ * Functions determine what sounds will be played 
  * Based on what the result of gladiatorBlock or "computer" will get vs what player chooses
  */
 
@@ -148,18 +168,33 @@ function playAudio(blockedAttack) {
         audio.currentTime = 0;
         audio.volume = 0.15;
         audio.play();
-        if (blockedAttack) {
-            let block = document.getElementById('sword-block');
-            console.log('Block');
-            block.currentTime = 0;
-            block.volume = 0.15;
-            block.play();
+        if (isBossBattle) { 
+            if (blockedAttack) {
+                let bossAttack = document.getElementById('boss-attack');
+                bossAttack.currentTime = 0;
+                bossAttack.volume = 0.15;
+                bossAttack.play();
+            } else {
+                let hit = document.getElementById('sword-hit');
+                console.log('Hit');
+                hit.currentTime = 0;
+                hit.volume = 0.15;
+                hit.play();
+            }
         } else {
-            let hit = document.getElementById('sword-hit');
-            console.log('Hit');
-            hit.currentTime = 0;
-            hit.volume = 0.15;
-            hit.play();
+            if (blockedAttack) {
+                let block = document.getElementById('sword-block');
+                console.log('Block');
+                block.currentTime = 0;
+                block.volume = 0.15;
+                block.play();
+            } else {
+                let hit = document.getElementById('sword-hit');
+                console.log('Hit');
+                hit.currentTime = 0;
+                hit.volume = 0.15;
+                hit.play();
+            }
         }
     }
 }
