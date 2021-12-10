@@ -89,9 +89,18 @@ function gladiatorBlock() {
 function swing(swingSide) {
     let result = gladiatorBlock();
     let blockedAttack = result === swingSide;
+    if (blockedAttack) {
+        getBlock();
+        flashBlock();
+    } else if (isBossBattle) {
+        getPlayer();
+        flashPlayer();
+    };
     playAudio(blockedAttack);
     let hitGladiator = result !== swingSide;
     if (hitGladiator) {
+        getHit();
+        flashHit();
         hitPoints();
     } else if (isBossBattle) {
         let playerLife = document.getElementById('player-life');
@@ -200,4 +209,50 @@ function playAudio(blockedAttack) {
             }
         }
     }
+}
+
+/**
+ * Functions that flash hit/block/player hit messages up for ther user
+ */
+
+let msgHit = document.getElementById('hit-glad');
+let msgBlock = document.getElementById('glad-block');
+let msgPlayerHit = document.getElementById('player-hit');
+
+let flash;
+
+function getHit() {
+    setTimeout(function(){
+        flash = msgHit.classList.remove('hidden');
+    });
+}
+
+function flashHit() {
+    setTimeout(function(){
+        flash = msgHit.classList.add('hidden');
+    }, 600);
+}
+
+function getBlock() {
+    setTimeout(function(){
+        flash = msgBlock.classList.remove('hidden');
+    });
+}
+
+function flashBlock() {
+    setTimeout(function(){
+        flash = msgBlock.classList.add('hidden');
+    }, 600);
+}
+
+function getPlayer() {
+    setTimeout(function(){
+        flash = msgPlayerHit.classList.remove('hidden');
+    });
+}
+
+function flashPlayer() {
+    setTimeout(function(){
+        flash = msgPlayerHit.classList.add('hidden');
+    }, 600);
 }
