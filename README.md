@@ -4,7 +4,7 @@ The Gladiator Game is a game that utilises basic Javascript functions to illustr
 
 ![Responsive Mock Up of Gladiator Game]()
 
-## Feautre
+## Features
 
 ### Existing Features
 
