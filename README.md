@@ -9,7 +9,7 @@ The Gladiator Game is a game that utilises basic Javascript functions to illustr
 ### Existing Features
 
 -__The User Interface__-
-The game allows you to start the game with a single press of a button, and you can click either left or right. Easy for user to grasp.
+The game allows you to start the game with a single press of a button, and you can click either the left sword image or the right sword to play the gladiator game. Easy for user to grasp and understand.
 
 ![UI of the game]()
 
