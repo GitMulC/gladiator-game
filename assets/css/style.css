@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=MedievalSharp&family=Roboto+Slab&display=swap');
 
-body{
+body {
     font-family: MedievalSharp, sans-serif;
     font-weight: 600;
     background-image: url(../images/arena-bg.jpg);
@@ -11,7 +11,7 @@ body{
 }
 
 
-#intro-tutorial{
+#intro-tutorial {
     margin: 0;
     background-color: rgba(0, 0, 0, 0.8);
     position: absolute;
@@ -24,7 +24,7 @@ body{
     color: #fffcf0;
 }
 
-#winner{
+#winner {
     margin: 0;
     background-color: rgba(0, 0, 0, 0.8);
     position: absolute;
@@ -37,7 +37,7 @@ body{
     color: #fffcf0;
 }
 
-#loser{
+#loser {
     margin: 0;
     background-color: rgba(0, 0, 0, 0.8);
     position: absolute;
@@ -81,16 +81,19 @@ body{
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    background-color: #fffcf0;;
+    background-color: #fffcf0;
+    ;
 }
 
-#button-mute,#button-unmute {
+#button-mute,
+#button-unmute {
     font-family: MedievalSharp, sans-serif;
     font-weight: 600;
     position: fixed;
     bottom: 10%;
     right: 1%;
-    background-color: #fffcf0;;
+    background-color: #fffcf0;
+    ;
 }
 
 #button-reset {
@@ -102,7 +105,8 @@ body{
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    background-color: #fffcf0;;
+    background-color: #fffcf0;
+    ;
 }
 
 #lifetotals {
@@ -113,7 +117,7 @@ body{
     color: red;
 }
 
-#lifetotals-boss{
+#lifetotals-boss {
     position: fixed;
     top: 0;
     right: 30%;
@@ -121,7 +125,7 @@ body{
     color: red;
 }
 
-#lifetotals-player{
+#lifetotals-player {
     position: fixed;
     top: 0;
     left: 30%;
@@ -129,8 +133,8 @@ body{
     color: green;
 }
 
-/* Images */ 
-#opponent{
+/* Images */
+#opponent {
     display: block;
     position: absolute;
     top: 63%;
@@ -139,7 +143,7 @@ body{
     transform: translate(-47%, -50%);
 }
 
-#opponent-2{
+#opponent-2 {
     display: block;
     position: absolute;
     height: 62%;
@@ -149,15 +153,15 @@ body{
     transform: translate(-47%, -50%);
 }
 
-#sword-left{
+#sword-left {
     transform: rotate(38deg);
 }
 
-#sword-right{
+#sword-right {
     transform: rotate(2deg);
 }
 
-.hidden{
+.hidden {
     display: none;
 }
 
@@ -171,23 +175,26 @@ body{
         margin: 19em 0 0 0;
         height: 23em;
     }
-    
+
     #right-attack {
         float: right;
         padding: 8em;
         margin: 19em 0 0 0;
         height: 23em;
     }
+
     #start-area {
-    height: 200px;
-    position: relative;
-    font-size: 2em;
-    color: red;
-}
-    #button-mute,#button-unmute {
-    position: fixed;
-    bottom: 87%;
-    right: 1%;
-}
+        height: 200px;
+        position: relative;
+        font-size: 2em;
+        color: red;
+    }
+
+    #button-mute,
+    #button-unmute {
+        position: fixed;
+        bottom: 87%;
+        right: 1%;
+    }
 
 }
