@@ -1,16 +1,23 @@
 /* jshint esversion: 8 */
 
 /**
- * Eventlisteners
+ * Global variables
  */
 let startGame = document.getElementById('button-start');
 let tutorialArea = document.getElementById('intro-tutorial');
+let explainArea = document.getElementById('fight-exp');
 let enemyOpponent = document.getElementById('opponent-area');
+let bossExplainArea = document.getElementById('fight-exp-boss');
 let bossOpponent = document.getElementById('opponent-area-2');
 let leftSwing = document.getElementById('left-attack');
 let rightSwing = document.getElementById('right-attack');
 let lifeTotals = document.getElementById('lifetotals');
 
+/**
+ * Eventlisteners
+ */
+
+// Most important event listeners for starting game and swings
 startGame.addEventListener('click', function () {
     battleStart();
 });
@@ -23,6 +30,7 @@ rightSwing.addEventListener('click', function () {
 
 /**
  * Mute/unmute button event listeners
+ * Mutes sound effects & background music
  */
 
 let mute;
@@ -32,11 +40,20 @@ muteBtn.addEventListener('click', function () {
     mute = true;
     muteBtn.classList.add('hidden');
     unmuteBtn.classList.remove('hidden');
+    let backgroundMusic = document.getElementById('ambient-crowd');
+    backgroundMusic.pause();
+    backgroundMusic.currentTime = 0;
 });
 unmuteBtn.addEventListener('click', function () {
     mute = false;
     unmuteBtn.classList.add('hidden');
     muteBtn.classList.remove('hidden');
+    let backgroundMusic = document.getElementById('ambient-crowd');
+    if (backgroundMusic) {
+        backgroundMusic.loop = true;
+        backgroundMusic.volume = 0.1;
+        backgroundMusic.play();
+    }
 });
 
 /**
@@ -52,7 +69,7 @@ restart.addEventListener('click', function () {
  * Functions
  */
 
-// Fight button function
+// Fight/start button function
 function battleStart() {
     startGame.classList.add('hidden');
     restart.classList.remove('hidden');
@@ -61,6 +78,7 @@ function battleStart() {
     rightSwing.classList.remove('hidden');
     tutorialArea.classList.add('hidden');
     lifeTotals.classList.remove('hidden');
+    explainArea.classList.remove('hidden');
     let backgroundMusic = document.getElementById('ambient-crowd');
     if (!mute) {
         backgroundMusic.loop = true;
@@ -107,6 +125,7 @@ function swing(swingSide) {
             let lose = document.getElementById('loser');
             lose.classList.remove('hidden');
             bossOpponent.classList.add('hidden');
+            bossExplainArea.classList.add('hidden');
             leftSwing.classList.add('hidden');
             rightSwing.classList.add('hidden');
         }
@@ -114,7 +133,7 @@ function swing(swingSide) {
 }
 
 /**
- * Enemy Hit points function & transition to the boss
+ * Enemy Hit tally function
  */
 
 function hitPoints() {
@@ -128,6 +147,7 @@ function hitPoints() {
             bossOpponent.classList.add('hidden');
             leftSwing.classList.add('hidden');
             rightSwing.classList.add('hidden');
+            bossExplainArea.classList.add('hidden');
             if (!mute) {
                 let cheer = document.getElementById('win-cheer');
                 cheer.currentTime = 0;
@@ -145,13 +165,18 @@ function hitPoints() {
     }
 }
 
-// 
+/**
+ * This function changes the play area.
+ * Once the first gladiator is defeated, this function brings up the boss
+ */
 function transitionToBoss() {
     isBossBattle = true;
     let boss = document.getElementById('opponent-area-2');
     boss.classList.remove('hidden');
+    bossExplainArea.classList.remove('hidden');
     enemyOpponent.classList.add('hidden');
     lifeTotals.classList.add('hidden');
+    explainArea.classList.add('hidden');
     let playerLife = document.getElementById('lifetotals-player');
     let bossLife = document.getElementById('lifetotals-boss');
     playerLife.classList.remove('hidden');
@@ -214,42 +239,28 @@ function playAudio(blockedAttack) {
 
 let msgHit = document.getElementById('hit-glad');
 let msgBlock = document.getElementById('glad-block');
-let msgPlayerHit = document.getElementById('player-hit');
-
 let flash;
 
 function getHit() {
-    setTimeout(function(){
+    setTimeout(function () {
         flash = msgHit.classList.remove('hidden');
     });
 }
 
 function flashHit() {
-    setTimeout(function(){
+    setTimeout(function () {
         flash = msgHit.classList.add('hidden');
     }, 600);
 }
 
 function getBlock() {
-    setTimeout(function(){
+    setTimeout(function () {
         flash = msgBlock.classList.remove('hidden');
     });
 }
 
 function flashBlock() {
-    setTimeout(function(){
+    setTimeout(function () {
         flash = msgBlock.classList.add('hidden');
-    }, 600);
-}
-
-function getPlayer() {
-    setTimeout(function(){
-        flash = msgPlayerHit.classList.remove('hidden');
-    });
-}
-
-function flashPlayer() {
-    setTimeout(function(){
-        flash = msgPlayerHit.classList.add('hidden');
     }, 600);
 }
