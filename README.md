@@ -23,7 +23,7 @@ As previously mentioned, sound effects are utilized to signify hits and blocks t
 There is a mute and unmute button which toggles the sounds and music found on the site. These features allow for a more accesible and tailored experience for th user.
 
 -__Health counter/tallies__-
-A responsive tally that tells you the current hits landed on the gladiator you're facing. They also serve to illustrate if an attack has hit the opponent or not, especially if the user has toggled the mute button. This is to indicate how close the user is to winning the gladiator game. In the second fight, there are two tallies. One for the user (in green) and one for the boss gladiator. Each starts at 5 and when either the player or boss lands a hit, their respective tally will decrement until it hits zero. First one to hit zero loses and the other is the winner.
+A responsive tally that tells you the current hits landed on the gladiator you're facing. They also serve to illustrate if an attack has hit the opponent or not, especially if the user has toggled the mute button. This is to indicate how close the user is to winning the gladiator game. In the second fight, there are two tallies. One for the user (in green) and one for the boss gladiator. Each starts at 0 and when either the player or boss lands a hit, their respective tally will increment until one hits five. First one to hit 5 loses and the other is declared the winner.
 
 -__Restart__-
 The restart button allows you sto start over or replay at any point in the game. This features gives the user a form of replayability.
