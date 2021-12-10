@@ -92,9 +92,6 @@ function swing(swingSide) {
     if (blockedAttack) {
         getBlock();
         flashBlock();
-    } else if (isBossBattle) {
-        getPlayer();
-        flashPlayer();
     };
     playAudio(blockedAttack);
     let hitGladiator = result !== swingSide;
