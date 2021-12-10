@@ -24,10 +24,35 @@ body{
     color: #fffcf0;
 }
 
+#winner{
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 20px;
+    color: #fffcf0;
+}
+
+#loser{
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 20px;
+    color: #fffcf0;
+}
+
 #left-attack {
     float: left;
     padding: 1px;
-    border: 5px solid black;
     margin: 1em 0 0 0;
     height: 10em;
     width: 10em;
@@ -36,18 +61,15 @@ body{
 #right-attack {
     float: right;
     padding: 1px;
-    border: 5px solid black;
     margin: 1em 0 0 0;
     height: 10em;
-    width: 10em;
+    width: 11em;
 }
 
 #start-area {
     height: 50px;
     position: relative;
-    border: 3px solid red;
     font-size: 2em;
-    color: red;
 }
 
 #button-start {
@@ -111,7 +133,7 @@ body{
 #opponent{
     display: block;
     position: absolute;
-    top: 58%;
+    top: 63%;
     left: 50%;
     margin-right: -50%;
     transform: translate(-47%, -50%);
@@ -120,15 +142,19 @@ body{
 #opponent-2{
     display: block;
     position: absolute;
-    height: 77%;
-    width: 47%;
-    top: 61%;
+    height: 62%;
+    width: 67%;
+    top: 65%;
     left: 48%;
     transform: translate(-47%, -50%);
 }
 
+#sword-left{
+    transform: rotate(38deg);
+}
+
 #sword-right{
-    transform: scaleX(-1);
+    transform: rotate(2deg);
 }
 
 .hidden{
@@ -142,7 +168,6 @@ body{
     #left-attack {
         float: left;
         padding: 8em;
-        border: 5px solid black;
         margin: 19em 0 0 0;
         height: 23em;
     }
@@ -150,14 +175,12 @@ body{
     #right-attack {
         float: right;
         padding: 8em;
-        border: 5px solid black;
         margin: 19em 0 0 0;
         height: 23em;
     }
     #start-area {
     height: 200px;
     position: relative;
-    border: 3px solid red;
     font-size: 2em;
     color: red;
 }
