@@ -10,6 +10,35 @@ body {
     background-size: cover;
 }
 
+/* Images */
+#opponent {
+    display: block;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    width: 60%;
+    margin-right: -50%;
+    transform: translate(-47%, -50%);
+}
+
+#opponent-2 {
+    display: block;
+    position: absolute;
+    height: 48%;
+    width: 98%;
+    top: 71%;
+    left: 45%;
+    transform: translate(-47%, -50%);
+}
+
+#sword-left {
+    transform: rotate(38deg);
+}
+
+/* #sword-right {
+    transform: rotate(2deg);
+} */
+
 
 #intro-tutorial {
     margin: 0;
@@ -119,46 +148,18 @@ body {
 
 #lifetotals-boss {
     position: fixed;
-    top: 0;
-    right: 30%;
+    top: 1%;
+    right: 1%;
     font-size: 3em;
     color: red;
 }
 
 #lifetotals-player {
     position: fixed;
-    top: 0;
-    left: 30%;
+    top: 1%;
+    left: 1%;
     font-size: 3em;
     color: green;
-}
-
-/* Images */
-#opponent {
-    display: block;
-    position: absolute;
-    top: 63%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-47%, -50%);
-}
-
-#opponent-2 {
-    display: block;
-    position: absolute;
-    height: 62%;
-    width: 60%;
-    top: 65%;
-    left: 48%;
-    transform: translate(-47%, -50%);
-}
-
-#sword-left {
-    transform: rotate(38deg);
-}
-
-#sword-right {
-    transform: rotate(2deg);
 }
 
 .hidden {
@@ -168,7 +169,29 @@ body {
 
 
 /* Media Queries */
+@media screen and (min-width: 600px) {
+    #opponent {
+        width: 35%;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    #opponent-2 {
+        width: 50%;
+    }
+}
+
 @media screen and (min-width: 1200px) {
+    #opponent {
+        display: block;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        width: 25%;
+        margin-right: -50%;
+        transform: translate(-47%, -50%);
+    }
+
     #left-attack {
         float: left;
         padding: 8em;
