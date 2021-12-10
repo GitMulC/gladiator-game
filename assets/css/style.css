@@ -40,6 +40,7 @@ body {
     height: 350px;
 }
 
+/* Game areas */
 
 #intro-tutorial {
     margin: 0;
@@ -54,13 +55,43 @@ body {
     color: #fffcf0;
 }
 
+#fight-exp {
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 91%;
+    left: 35%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 11px;
+    color: #fffcf0;
+}
+
+#fight-exp-boss {
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 44%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 16px;
+    color: #fffcf0;
+}
+
 #flash-msg {
     position: relative;
     text-align: center;
-    transform: translate(0%, 800%);
     font-weight: bold;
     font-size: 2em;
     color: red;
+    top: 55%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    margin: 0%;
 }
 
 #winner {
@@ -106,7 +137,7 @@ body {
 }
 
 #start-area {
-    height: 50px;
+    height: 100px;
     position: relative;
     font-size: 2em;
 }
@@ -152,27 +183,32 @@ body {
 }
 
 #lifetotals {
+    text-align: center;
     position: fixed;
     bottom: 0;
-    right: 50%;
+    right: 5%;
     font-size: 20px;
     color: red;
 }
 
 #lifetotals-boss {
     position: fixed;
-    top: 1%;
+    bottom: 1%;
     right: 1%;
-    font-size: 3em;
+    font-size: 1em;
     color: red;
 }
 
 #lifetotals-player {
     position: fixed;
-    top: 1%;
+    bottom: 1%;
     left: 1%;
-    font-size: 3em;
+    font-size: 1em;
     color: green;
+}
+
+#hits {
+    font-size: 1em;
 }
 
 .hidden {
@@ -184,6 +220,10 @@ body {
 @media screen and (min-width: 600px) {
     #opponent {
         width: 35%;
+    }
+
+    #lifetotals-boss, #lifetotals-player {
+        font-size: 2em;
     }
 }
 
