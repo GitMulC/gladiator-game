@@ -1,3 +1,5 @@
+/* jshint esversion: 8 */
+
 /**
  * Eventlisteners
  */
@@ -123,7 +125,7 @@ function hitPoints() {
             if (!mute) {
                 let cheer = document.getElementById('win-cheer');
                 cheer.currentTime = 0;
-                cheer.volume = 0.4;
+                cheer.volume = 0.3;
                 cheer.play();
             }
         }
@@ -137,6 +139,7 @@ function hitPoints() {
     }
 }
 
+// 
 function transitionToBoss() {
     isBossBattle = true;
     let boss = document.getElementById('opponent-area-2');
@@ -150,7 +153,7 @@ function transitionToBoss() {
     if (!mute) {
         let cheer = document.getElementById('win-cheer');
         cheer.currentTime = 0;
-        cheer.volume = 0.4;
+        cheer.volume = 0.3;
         cheer.play();
     }
 }
