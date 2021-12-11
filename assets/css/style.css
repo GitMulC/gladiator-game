@@ -17,7 +17,7 @@ body {
     position: absolute;
     top: 65%;
     left: 50%;
-    width: 35%;
+    width: 20%;
     margin-right: -50%;
     transform: translate(-47%, -50%);
 }
@@ -60,7 +60,7 @@ body {
     margin: 0;
     background-color: rgba(0, 0, 0, 0.8);
     position: absolute;
-    top: 25%;
+    top: 30%;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
@@ -126,7 +126,7 @@ body {
     padding: 1px;
     margin: 1em 0 0 0;
     height: 10em;
-    width: 10em;
+    width: 5em;
 }
 
 #right-attack {
@@ -134,11 +134,12 @@ body {
     padding: 1px;
     margin: 1em 0 0 0;
     height: 10em;
-    width: 11em;
+    width: 5em;
 }
 
 #start-area {
     height: 100px;
+    width: 100px;
     position: relative;
     font-size: 2em;
 }
@@ -219,10 +220,6 @@ body {
 
 /* Media Queries */
 @media screen and (min-width: 600px) {
-    #opponent {
-        width: 35%;
-    }
-
     #lifetotals-boss, #lifetotals-player {
         font-size: 2em;
     }
