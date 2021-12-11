@@ -110,7 +110,7 @@ function swing(swingSide) {
     if (blockedAttack) {
         getBlock();
         flashBlock();
-    };
+    }
     playAudio(blockedAttack);
     let hitGladiator = result !== swingSide;
     if (hitGladiator) {
