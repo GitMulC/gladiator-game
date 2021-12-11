@@ -31,7 +31,7 @@ The MedievalSharp was selected as the primary font to be used thorughout the sit
 
 ### Wireframes
 
-![Wireframe Page](documentation/testing/wireframes/gladiator-game-wireframe.png)
+![Wireframe Page](documentation/wireframes/gladiator-game-wireframe.png)
 
 ## Features
 
@@ -95,7 +95,7 @@ The MedievalSharp was selected as the primary font to be used thorughout the sit
 -__Restart__-
     - The restart button allows you to start over or replay at any point in the game. This features gives the user a form of replayability and it allows them to restart the game should they lose.
 
-![Restart Button](documentation/testing/)
+![Restart Button](documentation/testing/restart.png)
 
 -__Hit/Block Messages__-
     - During the fight, hit or block messages will pop up in red text momentarily in the middle of the screen. The purpose of these features is to convey what is happening throughout the fight if the user has the mute button toggled.
@@ -136,7 +136,7 @@ The MedievalSharp was selected as the primary font to be used thorughout the sit
 - Google Chrome Desktop:
   - ![Google Chrome Compatibility](documentation/testing/chrome-desktop.png)
 - Safari Tablet:
-  - ![Safari Tablet Compatibility](documentation/testing/safari-tablet.png)
+  - ![Safari Tablet Compatibility](documentation/testing/safari-laptop.png)
 - Firefox Mobile:
   - ![Firefox Mobile Compatibility](documentation/testing/firefox-mobile.png)
 
@@ -146,7 +146,7 @@ The MedievalSharp was selected as the primary font to be used thorughout the sit
 - Responsiveness on Desktop:
   - ![Desktop Responsiveness](documentation/testing/chrome-desktop.png)
 - Responsiveness on Tablet:
-  - ![Tablet Responsiveness](documentation/testing/safari-tablet.png)
+  - ![Tablet Responsiveness](documentation/testing/safari-laptop.png)
 - Responsiveness on Mobile:
   - ![Mobile Responsiveness](documentation/testing/firefox-mobile.png)
 
@@ -160,6 +160,9 @@ The MedievalSharp was selected as the primary font to be used thorughout the sit
 
 ### Unfixed Bugs
 - One unfixed bug was that `z-index: 0;` did not seem to work on the left and right sword. I tried using `z-index: 1;` on them and then `z-index: 0;` on the starting area section but it would not work properly for me. No matter what element I put the `z-index: 0;` or how I structured and re-structured my CSS code it would not work the way I wanted to and prevent overlapping elements blocking the user from clikcing on an event listener.
+ - ![Attack buttons](documentation/testing/sword-feature.png)
+
+- Additionally, a lot of images did not look properly aligned or centrally aligned. Especially the swords buttons. This also made it extremely difficult to adapt them for responsiveness.
  - ![Attack buttons](documentation/testing/sword-feature.png)
 
 ## Deployment
